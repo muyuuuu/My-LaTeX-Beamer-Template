@@ -1,0 +1,64 @@
+\documentclass[no-math]{ctexbeamer}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{unicode-math}
+
+\usefonttheme{serif}
+\bibliographystyle{unsrtnat}
+\setCJKmainfont{SourceHanSansCN-Normal}
+\setcounter{tocdepth}{1}
+\setmainfont{texgyrepagella.otf}[
+    Extension      = .otf,
+    UprightFont    = *-regular,
+    BoldFont       = *-bold,
+    ItalicFont     = *-italic,
+    BoldItalicFont = *-bolditalic,
+]
+
+\mode<presentation>
+{
+  \usetheme{Madrid}       % or try default, Darmstadt, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\title[Problem Background]{图划分报告——以问题背景为主}
+\author{兰铃}
+\institute{1307}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{静态图划分}
+
+\begin{frame}{静态图划分BGPLP}
+    \begin{block}{问题背景与约束}
+        \begin{itemize}
+            \item 各个子图负载要求均衡；
+            \item 各个子图之间的联系尽可能少。
+        \end{itemize}
+    \end{block}
+    论文的处理流程：\citet{target_distribution_1}
+    \begin{itemize}
+        \item hash分配节点的标签；
+        \item 为顶点选择标签，达到两个约束限制，设计的公式为$\text{score}(v,l)$和$bestLabel(v)$；
+        \item 双收敛：边割率小于$\epsilon$或负载的平衡率小于$\lambda$。
+    \end{itemize}
+
+    \begin{alertblock}{疑问}
+        当多次迭代后算法仍然不能取得较大优化效果，那么就有理由相信算法已经达到收敛状态。
+    \end{alertblock}
+\end{frame}
+
+\bibliography{book}
+
+\end{document}

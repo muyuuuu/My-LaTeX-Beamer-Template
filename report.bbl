@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Madiraju et~al.(2018)Madiraju, Sadat, Fisher, and
+  Karimabadi]{target_distribution_1}
+Naveen~Sai Madiraju, Seid~M. Sadat, Dimitry Fisher, and Homa Karimabadi.
+\newblock Deep temporal clustering : Fully unsupervised learning of time-domain
+  features, 2018.
+
+\end{thebibliography}
